@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-gray-900 dark:text-white;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Ensure tables don't shrink too much */
+.table-responsive table {
+    min-width: 600px; /* You can adjust */
+}
+
+/* Mobile-friendly actions (Edit/Delete buttons stack) */
+@media (max-width: 640px) {
+    .table-actions {
+        display: flex;
+        flex-direction: column; /* stack vertically */
+        gap: 0.5rem; /* space between buttons */
+    }
+}
